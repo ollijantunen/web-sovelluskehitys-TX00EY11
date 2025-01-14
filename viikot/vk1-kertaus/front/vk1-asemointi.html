@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Positioning Items</title>
+    <meta charset="UTF-8" />
+    <style>
+      /*////////////////////
+        // Positioning items
+        //////////////////////
+
+        Reset *
+        Display: inline vs block
+        https://www.w3schools.com/cssref/pr_class_display.asp
+
+        Box-sizing
+        https://www.w3schools.com/css/css3_box-sizing.asp
+
+        Using percentages and max-width
+        https://www.w3schools.com/cssref/css_units.asp
+
+        Centering
+        https://www.w3schools.com/css/css_align.asp
+
+        Float and clear
+        https://www.w3schools.com/cssref/pr_class_float.asp
+
+
+        Absolute/Relative positioning
+        https://www.w3schools.com/cssref/pr_class_position.asp
+
+
+        Flexbox - https://www.w3schools.com/css/css3_flexbox.asp
+
+        */
+
+      .box {
+        height: 100px;
+        width: 20%;
+        border: 1px solid black;
+        color: aliceblue;
+        display: block;
+        float: left;
+      }
+
+      #red {
+        background-color: red;
+      }
+      #green {
+        background-color: green;
+      }
+      #blue {
+        background-color: blue;
+      }
+      #yellow {
+        background-color: yellow;
+        color: black;
+      }
+      #orange {
+        background-color: orange;
+      }
+    </style>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <nav class="nav clearfix">
+      <div class="box" id="red">Box 1</div>
+      <div class="box" id="green">Box 2</div>
+      <div class="box" id="blue">Box 3</div>
+      <div class="box" id="yellow">Box 4</div>
+      <div class="box" id="orange">Box 5</div>
+
+      <ul>
+        <li id="nav-logo">Logo</li>
+        <li><a href="#home">Koti</a></li>
+        <li><a href="#about">Meistä</a></li>
+        <li><a href="#contact">Yhteystiedot</a></li>
+        <li id="nav-li-right"><a href="#login">Kirjaudu</a></li>
+      </ul>
+    </nav>
+
+    <!-- Float continues, clearing -->
+    <!-- <div class="clear"></div> -->
+
+    <!-- Kommenttitesti -->
+    <main>
+      <div class="slogan">
+        Miten
+        <span id="logo">Sovellus</span>
+        auttaa sinua hyvinvointisi seuraamisessa?
+      </div>
+      <div class="card clearfix card-overlay">
+        <article class="card-content">
+          <img
+            class="card-image"
+            src="img/james-donaldson-toPRrcyAIUY-unsplash.jpg"
+            alt="Rantakuva tropiikista. Vesi, hiekkaranta ja puita. Kuvaaja: James Donaldson."
+          />
+
+          <h2>Tietoa meistä</h2>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas odio
+            velit quo? Distinctio itaque iusto, iste ea laudantium accusamus
+            veritatis. Unde eos rem dignissimos excepturi voluptatem beatae!
+            <br /><br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Reprehenderit odit neque amet officia, incidunt recusandae tenetur
+            illo eum fuga corrupti maxime est dicta ut? Ab quaerat deserunt enim
+            suscipit blanditiis? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Blanditiis beatae ratione dolore asperiores
+            cupiditate animi, culpa modi delectus quos? Officiis in nulla ipsam?
+            Tenetur eius dolore voluptate voluptatibus accusamus qui!
+          </p>
+        </article>
+      </div>
+    </main>
+
+    <footer>Tekijänoikeusilmoitus (C) Minä.</footer>
+
+    <!-- Responsive images and centering -->
+  </body>
+</html>

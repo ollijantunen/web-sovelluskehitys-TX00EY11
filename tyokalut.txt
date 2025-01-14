@@ -1,0 +1,15 @@
+Työkaluja
+
+Koodaus
+VS Code
+- Emmet-lisäosa
+
+Frontin tutkiminen
+Chrome
+
+liveserver
+
+linttaus
+prettier
+
+vite
