@@ -1,0 +1,5 @@
+# Nämä eivät mene versionhallintaan
+
+.vscode
+.DS_Store
+node_modules
