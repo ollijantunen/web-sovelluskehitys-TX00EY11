@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="fi">
   <head>
-    <title>Positioning Items</title>
-    <meta charset="UTF-8" />
-    <style>
-      /*////////////////////
-        // Positioning items
+    <title>OloSeuranta</title>
+    <meta charset="UTF-8">
+
+        <!-- // Positioning items
         //////////////////////
 
         Reset *
@@ -29,64 +28,27 @@
         https://www.w3schools.com/cssref/pr_class_position.asp
 
 
-        Flexbox - https://www.w3schools.com/css/css3_flexbox.asp
+        Flexbox - https://www.w3schools.com/css/css3_flexbox.asp -->
 
-        */
 
-      .box {
-        height: 100px;
-        width: 20%;
-        border: 1px solid black;
-        color: aliceblue;
-        display: block;
-        float: left;
-      }
-
-      #red {
-        background-color: red;
-      }
-      #green {
-        background-color: green;
-      }
-      #blue {
-        background-color: blue;
-      }
-      #yellow {
-        background-color: yellow;
-        color: black;
-      }
-      #orange {
-        background-color: orange;
-      }
-    </style>
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/main.css">
   </head>
 
   <body>
     <nav class="nav clearfix">
-      <div class="box" id="red">Box 1</div>
-      <div class="box" id="green">Box 2</div>
-      <div class="box" id="blue">Box 3</div>
-      <div class="box" id="yellow">Box 4</div>
-      <div class="box" id="orange">Box 5</div>
-
       <ul>
-        <li id="nav-logo">Logo</li>
-        <li><a href="#home">Koti</a></li>
+        <li id="nav-logo">OloSeuranta</li>
+        <li class="active"><a href="#home">Koti</a></li>
         <li><a href="#about">Meistä</a></li>
         <li><a href="#contact">Yhteystiedot</a></li>
         <li id="nav-li-right"><a href="#login">Kirjaudu</a></li>
       </ul>
     </nav>
 
-    <!-- Float continues, clearing -->
-    <!-- <div class="clear"></div> -->
-
-    <!-- Kommenttitesti -->
     <main>
       <div class="slogan">
         Miten
-        <span id="logo">Sovellus</span>
+        <span id="logo">OloSeuranta</span>
         auttaa sinua hyvinvointisi seuraamisessa?
       </div>
       <div class="card clearfix card-overlay">
@@ -95,7 +57,7 @@
             class="card-image"
             src="img/james-donaldson-toPRrcyAIUY-unsplash.jpg"
             alt="Rantakuva tropiikista. Vesi, hiekkaranta ja puita. Kuvaaja: James Donaldson."
-          />
+          >
 
           <h2>Tietoa meistä</h2>
 
@@ -103,7 +65,7 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas odio
             velit quo? Distinctio itaque iusto, iste ea laudantium accusamus
             veritatis. Unde eos rem dignissimos excepturi voluptatem beatae!
-            <br /><br />
+            <br><br>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Reprehenderit odit neque amet officia, incidunt recusandae tenetur
             illo eum fuga corrupti maxime est dicta ut? Ab quaerat deserunt enim
@@ -116,8 +78,7 @@
       </div>
     </main>
 
-    <footer>Tekijänoikeusilmoitus (C) Minä.</footer>
+    <footer>Tekijänoikeusilmoitus (C) Minä. 2025.</footer>
 
-    <!-- Responsive images and centering -->
   </body>
 </html>

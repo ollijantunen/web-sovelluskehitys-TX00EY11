@@ -13,13 +13,23 @@ p {
     color: white;
 }
 
+li.active a {
+  background-color: hsl(222, 71%, 48%);
+}
+
 .clearfix::after {
     content:"";
     clear: both;
     display: table;
 }
 
+
+
 /* NAV */
+
+.nav {
+  margin: 0 40px;
+}
 
 .nav ul {
     width: 100%;
@@ -29,6 +39,7 @@ p {
     padding: 0;
     /* Miksi ilman overflow: hiddeniä bg-color ei näkynyt? */
     overflow: hidden;
+    box-shadow: 0px 14px 15px -4px hsl(222, 79%, 15%);
 }
 
 .nav li {
@@ -41,7 +52,7 @@ p {
 }
 
 #nav-logo {
-    color:white;
+    color:hsl(202.67,100%, 74.18%);
     font-size: 24px;
     text-align: center;
     padding: 8px 16px 16px;
@@ -59,10 +70,16 @@ nav a:hover {
     background-color: hsl(222, 79%, 25%);
 }
 
+nav a:active {
+  background-color: red;
+}
+
+
 /* MAIN */
 main {
     /* background-color: lightgreen; */
     color: hsl(204.37, 100%, 18.5%);
+    margin: 0 40px;
     padding-bottom: 20px;
     /* padding-left: 8px; */
   }
@@ -72,6 +89,7 @@ main {
     /* background-color: lightsalmon; */
     text-align: center;
     font-size: 24px;
+    margin: 50px 0;
     padding-top: 40px;
   }
 
@@ -87,8 +105,8 @@ main {
     background-image: url("../img/james-donaldson-toPRrcyAIUY-unsplash.jpg");
     background-size: cover;
     /* max-width: 600px; */
-    width: 800px;
-    padding: 10px;
+    width: 1200px;
+    padding: 50px;
     margin: 40px auto;
   }
 
