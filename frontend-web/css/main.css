@@ -108,6 +108,7 @@ main {
     width: 1200px;
     padding: 50px;
     margin: 40px auto;
+    position: relative;
   }
 
 .card h2 {
@@ -134,6 +135,14 @@ main {
     margin-bottom: 10px;
     margin-right: 10px;
     /* padding-right: 20px; */
+  }
+
+  #card-image-absolute {
+    width: 180px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-50%, -50%);
   }
 
 /* FOOTER */
