@@ -1,13 +1,30 @@
+@baseUrl = http://127.0.0.1:3000
 # ekat http-testit
 
 ### get juuri
-GET http://localhost:3000
+GET {{baseUrl}}
 
 ### POST Moro, jsonia bodyssa
-POST http://127.0.0.1:3000/api/moro
+POST {{baseUrl}}/api/moro
 content-type: application/json
 
 {
     "sender": "OJ",
     "message": "testitervehdys"
 }
+
+### POST tehtavat. Json-body.
+POST {{baseUrl}}/api/tehtavat
+Content-Type: application/json
+
+[{
+    "id": "1",
+    "tehtava": "Tee backend-tehtävä viikolta 1"
+},
+{
+    "id": "2",
+    "tehtava": "Tee backend-tehtävä viikolta 2"
+}]
+
+### GET olematon reitti/resurssi
+GET {{baseUrl}}/egnlk
