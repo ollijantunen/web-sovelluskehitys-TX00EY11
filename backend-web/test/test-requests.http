@@ -11,3 +11,8 @@ content-type: application/json
     "sender": "OJ",
     "message": "testitervehdys"
 }
+
+## Items
+
+### GET all items
+GET http://localhost:3000/api/items
