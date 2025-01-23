@@ -4,11 +4,11 @@
 
 #### Frontend
 
-- [] määräaika
+- [ ] määräaika
 
 #### Backend
 
-- [] määräaika
+- [ ] määräaika
 
 ### Viikko 1
 
@@ -18,7 +18,7 @@
 
 #### Backend
 
-- [] määräaika ke 22.1. klo 23.44
+- [x] Palautettu ajoissa | määräaika to 23.1. klo 12.59
 
 ---
 
