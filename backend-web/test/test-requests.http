@@ -1,10 +1,14 @@
+@baseUrl = http://127.0.0.1:3000
+@apiUrl = http://127.0.0.1:3000/api
 # ekat http-testit
 
 ### get juuri
-GET http://localhost:3000
+GET {{baseUrl}}
+### get juuri /
+GET {{baseUrl}}/
 
 ### POST Moro, jsonia bodyssa
-POST http://127.0.0.1:3000/api/moro
+POST {{baseUrl}}/api/moro
 content-type: application/json
 
 {
@@ -15,4 +19,16 @@ content-type: application/json
 ## Items
 
 ### GET all items
-GET http://localhost:3000/api/items
+GET {{apiUrl}}/items
+
+### GET item by id
+GET {{apiUrl}}/items/3
+
+### POST new item
+POST {{apiUrl}}/items
+Content-Type: application/json
+
+{
+  "name": "Sitruuna",
+  "jotain": "jotain muuta"
+}
