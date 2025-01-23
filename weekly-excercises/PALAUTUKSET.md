@@ -1,6 +1,6 @@
 ## Kurssin tehtävät
 
-### Viikko 2
+### Viikko 3
 
 #### Frontend
 
