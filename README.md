@@ -1,4 +1,5 @@
-#### Web-sovelluskehitys
+## Web-sovelluskehitys -kurssi 1/2025-3/2025 @ Metropolia Ammattikorkeakoulu
+
 ##### Backend -tehtävä, viikko 1
 
 ---
@@ -36,3 +37,6 @@ _.gitignore on projektin juuressa_ https://github.com/ollijantunen/web-sovellusk
 
 Extra: Add more funtionalities to your REST API
 
+
+---
+#### Kurssin työkalut
