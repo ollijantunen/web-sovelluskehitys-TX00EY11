@@ -32,3 +32,30 @@ Content-Type: application/json
   "name": "Sitruuna",
   "jotain": "jotain muuta"
 }
+
+### POST tehtavat. Json-body.
+POST {{baseUrl}}/api/tehtavat
+Content-Type: application/json
+
+[{
+    "id": "1",
+    "tehtava": "Tee backend-tehtävä viikolta 1"
+},
+{
+    "id": "2",
+    "tehtava": "Tee backend-tehtävä viikolta 2"
+}]
+
+### PUT tehtavat :id. JSON-body.
+PUT {{baseUrl}}/api/tehtavat/11
+Content-Type: application/json
+
+{
+    "tehtava": "Tee backend-tehtävät viikolta 11"
+}
+
+### DELETE tehtavat :id
+DELETE {{baseUrl}}/api/tehtavat/11
+
+### GET olematon reitti/resurssi
+GET {{baseUrl}}/egnlk
