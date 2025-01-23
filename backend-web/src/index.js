@@ -81,16 +81,60 @@ app.get('/api/tehtavat', (req, res) => {
 app.post('/api/tehtavat', (req, res) => {
   console.log(req.body);
   res.status(201);
-  res.json({vastaus: "Tehtäväkuvaus lisätty", runko: req.body});
+  res.json({vastaus: 'Tehtäväkuvaus lisätty', runko: req.body});
+});
+
+// PUT-pyyntö tehtäviin, vastaus JSON-muodossa
+app.put('/api/tehtavat/:id', (req, res) => {
+  const id = Number(req.params.id);
+  console.log(req.body);
+
+  if (isNaN(id)) {
+    res.status(400);
+    res.json({
+      error: 'Id:n tulee olla numero',
+    });
+    return;
+  }
+
+  if (JSON.stringify(req.body) === '{}') {
+    res.status(400);
+    res.json({error: 'Runko on tyhjä', runko: req.body});
+    return;
+  } else {
+    res.status(200);
+    res.json({vastaus: `Tehtävä ${id} päivitetty`, runko: req.body});
+  }
+});
+
+// DELETE-pyyntö tehtävä Id:n perusteella, vastaus JSON-muodossa
+app.delete('/api/tehtavat/:id', (req, res) => {
+  const id = Number(req.params.id);
+
+  if (isNaN(id)) {
+    res.set({'Content-Type': 'application/json'});
+    console.log(res.get('Content-Type'));
+
+    res.status(400);
+    res.json({
+      error: 'Id:n tulee olla numero',
+    });
+    return;
+  }
+  res.status(200);
+  res.json({
+    viesti: 'Poisto onnistui',
   });
+});
 
 // Kaikkien olemattomien resurssien vastaus 404
 // Asteriski toimii, koska tämä kohta on viimeisenä reittinä tiedostossa
-app.all("*", (req, res) => {
-  console.log("Olematon resurssi.");
+// Tosin http://127.0.0.1:3000 ilman kauttaviivaa menee funktioon, mutta staattinen juuren tiedosto tulee 200
+app.all('*', (req, res) => {
+  console.log('Olematon resurssi.');
   res.status(404);
-res.send("Reittiä ei löydy.");
-})
+  res.send('Reittiä ei löydy.');
+});
 
 // Serveri kuuntelee porttia osoitteessa yhteydenottojen varalta
 app.listen(port, hostname, () => {

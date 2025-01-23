@@ -21,16 +21,16 @@ _.gitignore on projektin juuressa_ https://github.com/ollijantunen/web-sovellusk
 ##### Implement a (dummy) REST API including following resources/endpoints:
 - [x] read some data from server (send response in json format)
 - [x] send some data to server
-- [ ] delete data (just a dummy functionality, test error response too)
-- [ ] modify something (just a dummy functionality, test error response too)
+- [x] delete data (just a dummy functionality, test error response too)
+- [x] modify something (just a dummy functionality, test error response too)
 - [x] send 404 response for non-existing resources
 
 ##### Adapt HTTP standards:
-- [ ] use appropriate HTTP methods for requests
-- [ ] set correct status codes and Content-Type headers to responses
+- [x] use appropriate HTTP methods for requests
+- [x] set correct status codes and Content-Type headers to responses
 
 ##### Test
-- [ ] Test with Postman or similar
+- [x] Test with Postman or similar | REST Client add-on in VS Code
 
 - [x] Commit your changes (git add . & git commit -m "describe you changes here") and push your week1 branch to the remote repo in Github (git push -u origin week1)
 
