@@ -33,6 +33,9 @@ Content-Type: application/json
   "jotain": "jotain muuta"
 }
 
+### DELETE item by id
+DELETE {{apiUrl}}/items/3
+
 ### POST tehtavat. Json-body.
 POST {{baseUrl}}/api/tehtavat
 Content-Type: application/json

@@ -1,5 +1,11 @@
 import express from 'express';
-import {addItem, getItemById, getItems} from './items.js';
+import {
+  addItem,
+  getItemById,
+  getItems,
+  removeItem,
+  updateItem,
+} from './items.js';
 const hostname = '127.0.0.1';
 const app = express();
 const port = 3000;
@@ -21,6 +27,8 @@ app.get('/api', (req, res) => {
 app.get('/api/items', getItems);
 app.get('/api/items/:id', getItemById);
 app.post('/api/items', addItem);
+app.put('/api/items/:id', updateItem);
+app.delete('/api/items/:id', removeItem);
 
 // Syötteen lukeminen reittiparametreista (route parameter(=params))
 app.get('/api/sum/:num1/:num2', (req, res) => {
