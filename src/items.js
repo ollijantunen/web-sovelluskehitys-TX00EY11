@@ -56,20 +56,42 @@ const addItem = (req, res) => {
   return res.json({message: 'Request is missing name property'});
 };
 
-// TODO: put
-
 // Päivitä itemin tiedot id:n perusteella
 const updateItem = (req, res) => {
   console.log('updateItem request body: ', req.params.id, req.body);
 
+  // muunnetaan id-parametri numero-tyyppiseksi
   const id = Number(req.params.id);
+  const name = req.body.name;
 
-  if (!isNaN(id && req.body.name))
-    // Jos pyynnön parametri sisältää id:n ja se löytyy datasta,
-    // päivitetään kyseisen id:n tietue uusilla bodyn tiedoilla
+  // Jos id-parametri ei ole numero(muotoinen), niin palautetaan virheilmoitus
+  // typeof Number == number
+  if (isNaN(id)) {
+    return res.status(400).json({message: 'Invalid id property.'});
+  } else if (!name) {
+    //  Jos name-parametria ei löydy bodyn mukana tai se on tyhjä, palautetaan virheilmoitus
+    return res
+      .status(400)
+      .json({message: 'Property to be updated is not found in the request.'});
+  }
 
-    // Jos olemassa olevaa id:tä ei löydy, palautetaan virheilmoitus
-    res.status(404);
+  // etsitään id:tä vastaava item. Jos ei löydy, niin item on undefined
+  const item = items.find((item) => item.id === id);
+
+  // Jos item löytyi id:n perusteella, päivitetään kyseisen id:n tietue uusilla bodyn tiedoilla
+  if (item) {
+    item.name = req.body.name;
+
+    res.status(200);
+    return res.json({
+      message: `Record of id ${id} was updated.`,
+      updatedItem: item,
+    });
+  } else {
+    // Jos id:tä vastaavaa itemiä ei löydy, palautetaan virheilmoitus
+    res.status(400);
+    return res.json({message: 'No such item.'});
+  }
 };
 
 // Poista item id:n perusteella
@@ -90,7 +112,7 @@ const removeItem = (req, res) => {
       console.log('items after remove: ', items);
 
       res.status(204);
-      return res.send();
+      return res.json({message: `Removed item ${id} succesfully.`});
     } else {
       // Jos id:tä ei löydy, palautetaan virheilmoitus
       res.status(404);

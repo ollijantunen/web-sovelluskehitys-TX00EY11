@@ -33,8 +33,43 @@ Content-Type: application/json
   "jotain": "jotain muuta"
 }
 
+### PUT update an item
+PUT {{apiUrl}}/items/2
+Content-Type: application/json
+
+{
+    "name": "PUT item2"
+}
+
 ### DELETE item by id
 DELETE {{apiUrl}}/items/3
+
+## users
+
+### GET user by id
+GET {{apiUrl}}/users/1
+
+### POST add new user
+POST {{apiUrl}}/users
+Content-Type: application/json
+
+{
+    "id": "5",
+    "username": "johndoe5",
+    "password": "password5",
+    "email": "johndoe5@example.com"
+}
+
+## login
+
+### POST mock login
+POST {{apiUrl}}/login
+Content-Type: application/json
+
+{
+    "username": "johndoe5",
+    "password": "password5"
+}
 
 ### POST tehtavat. Json-body.
 POST {{baseUrl}}/api/tehtavat
