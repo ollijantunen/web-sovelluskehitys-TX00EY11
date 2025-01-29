@@ -6,7 +6,14 @@ import {
   removeItem,
   updateItem,
 } from './items.js';
-import {addUser, getUserById, login} from './users.js';
+import {
+  addUser,
+  getUserById,
+  getUsers,
+  login,
+  removeUser,
+  updateUser,
+} from './users.js';
 const hostname = '127.0.0.1';
 const app = express();
 const port = 3000;
@@ -32,8 +39,11 @@ app.put('/api/items/:id', updateItem);
 app.delete('/api/items/:id', removeItem);
 
 // Users-resurssin päätepisteet (endpoint)
+app.get('/api/users', getUsers);
 app.get('/api/users/:id', getUserById);
 app.post('/api/users', addUser);
+app.put('/api/users/:id', updateUser);
+app.delete('/api/users/:id', removeUser);
 
 // Mock login-reitti
 app.post('/api/login', login);
